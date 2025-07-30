@@ -20,4 +20,5 @@ spec:
           resources:
             requests:
               cpu: "100m"
+          imagePullPolicy: Always
 

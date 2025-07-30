@@ -14,6 +14,11 @@ app.get('/users', (req, res) => {
   res.json(users);
 });
 
-app.listen(3001, () => {
-  console.log('User service running on port 3001');
-});
+if (require.main === module) {
+  app.listen(3001, () => {
+    console.log('User Service running on port 3001');
+  });
+}
+
+module.exports = app;  // Export for testing
+

@@ -1,0 +1,29 @@
+# Node.js
+node_modules/
+.env
+dist/
+coverage/
+
+# Logs
+logs
+*.log
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Docker
+*.local
+*.pid
+*.sock
+
+# Kubernetes & Docker Compose
+*.yaml~
+docker-compose.override.yml
+
+# VSCode / IDE
+.vscode/
+.idea/
+
+# Test Output
+*.test.js.snap

@@ -24,6 +24,11 @@ app.get('/orders', (req, res) => {
   res.json(orders);
 });
 
-app.listen(3002, () => {
-  console.log('Order service running on port 3002');
-});
+if (require.main === module) {
+  app.listen(3002, () => {
+    console.log('Order Service running on port 3002');
+  });
+}
+
+module.exports = app;  // Export for testing
+

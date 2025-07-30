@@ -17,3 +17,4 @@ spec:
           image: neelrami/order-service:latest  # Your Docker Hub image
           ports:
             - containerPort: 3002
+          imagePullPolicy: Always
