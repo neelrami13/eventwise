@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: user-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: user
+  template:
+    metadata:
+      labels:
+        app: user
+    spec:
+      containers:
+        - name: user
+          image: neelrami/user-service:latest  # Your Docker Hub image
+          ports:
+            - containerPort: 3001
+          resources:
+            requests:
+              cpu: "100m"
+
